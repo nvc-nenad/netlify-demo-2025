@@ -42,7 +42,17 @@
     </div>
   </section>
 
-  <form name="contact" netlify>
+  <form
+    name="contact"
+    netlify method="POST"
+    netlify-honeypot="bot-field"
+    data-netlify="true"
+  >
+    <p class="hidden">
+      <label>
+        Don’t fill this out if you’re human: <input name="bot-field" type="text" />
+      </label>
+    </p>
     <p>
       <label>Name <input type="text" name="name" /></label>
     </p>
